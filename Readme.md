@@ -1,11 +1,4 @@
----
-title: "Readme"
-output: html_document
----
-
 ## My first R Programming language
-
-## **Question:** *Do harder exercises (difficulty level) burn more calories on average?*
 
 ## Dataset from Kaggle
 
