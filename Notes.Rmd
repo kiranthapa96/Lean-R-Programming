@@ -1,0 +1,47 @@
+---
+title: "Notes"
+output: html_document
+---
+
+### `tidyverse`
+
+-   What it is: A collection of R packages designed for data science.
+
+-   It bundles together popular packages like:
+
+-   dplyr → data manipulation (filter, select, group, summarise).
+
+-   ggplot2 → data visualization.
+
+-   readr → reading CSVs and text files.
+
+-   tibble → a modern data frame format.
+
+-   tidyr → reshaping and cleaning data (pivoting, spreading).
+
+Why we use it: Instead of base R functions (which can be clunky), tidyverse gives you clean, consistent, and human-readable syntax.
+
+```         
+# with tidyverse (dplyr)
+gym %>% group_by(difficulty) %>% summarise(avg_reps = mean(reps))
+
+# in base R
+aggregate(gym$reps, by=list(gym$difficulty), FUN=mean)
+```
+
+### `janitor`
+
+-   **What it is**: A small package with convenience functions for **cleaning messy data**.
+
+-   **Key feature**: `clean_names()`
+
+    -   It standardizes messy column names into snake_case (e.g., `"Exercise Name (Type)"` → `"exercise_name_type"`).
+
+-   Also has functions like:
+
+    -   `tabyl()` → quick frequency tables.
+
+    -   `remove_empty()` → drop empty rows/columns.
+
+**Why we use it**:\
+Real-world data often comes with spaces, capitals, or special characters in column names. Cleaning names makes your code easier and less error-prone.
